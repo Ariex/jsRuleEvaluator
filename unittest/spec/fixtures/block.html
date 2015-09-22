@@ -1,0 +1,205 @@
+<div id="testFixtures">
+    <p style="display: none" class="message " id="Form_TestForm_error"></p>
+    <fieldset>
+        <div class="field checkbox" id="IsMember">
+            <input type="checkbox" id="Form_TestForm_IsMember" class="checkbox" value="1" name="IsMember" data-parsley-multiple="IsMember">
+            <label for="Form_TestForm_IsMember" class="right">Are you RAA Member?</label>
+        </div>
+        <ul class="parsley-errors-list" id="parsley-id-multiple-IsMember"></ul>
+        <div class="field text" id="RAAMemberNumber">
+            <label for="Form_TestForm_RAAMemberNumber" class="left">RAA Member Number</label>
+            <div class="middleColumn">
+                <input type="text" data-parsley-required="true" data-parsley-required-condition="IsMember == True" id="Form_TestForm_RAAMemberNumber" class="text parsley-success" name="RAAMemberNumber">
+                <ul class="parsley-errors-list" id="parsley-id-5568"></ul>
+            </div>
+        </div>
+        <div class="field text" id="GivenName">
+            <label for="Form_TestForm_GivenName" class="left">Given Name</label>
+            <div class="middleColumn">
+                <input type="text" data-parsley-required="false" data-parsley-required-condition="!(IsMember == True)" id="Form_TestForm_GivenName" class="text" name="GivenName">
+                <ul class="parsley-errors-list" id="parsley-id-9759"></ul>
+            </div>
+        </div>
+        <div class="field text" id="LastName">
+            <label for="Form_TestForm_LastName" class="left">Last Name</label>
+            <div class="middleColumn">
+                <input type="text" id="Form_TestForm_LastName" class="text" name="LastName">
+                <ul class="parsley-errors-list" id="parsley-id-2762"></ul>
+            </div>
+        </div>
+        <div class="field email text" id="Email">
+            <label for="Form_TestForm_Email" class="left">Email</label>
+            <div class="middleColumn">
+                <input type="email" data-parsley-type="email" data-parsley-email-condition="RAAMemberNumber.length == 8" data-parsley-email-message="Email is required when member no length greater than 4." id="Form_TestForm_Email" class="email text" name="Email" data-parsley-required="false">
+                <ul class="parsley-errors-list" id="parsley-id-6514"></ul>
+            </div>
+        </div>
+        <div name="Enews" class="field optionset checkboxset" id="Enews">
+            <label class="left">Choose enews you wish to subscribe</label>
+            <div class="middleColumn">
+                <ul class="optionset checkboxset" id="Form_TestForm_Enews">
+                    <li class="odd valCORP parsley-error">
+                        <input type="checkbox" value="CORP" name="Enews[CORP]" class="checkbox" id="Form_TestForm_Enews_CORP" data-parsley-required="true" data-parsley-multiple="Enews">
+                        <label for="Form_TestForm_Enews_CORP">RAA e-news</label>
+                    </li>
+                    <ul class="parsley-errors-list filled" id="parsley-id-multiple-Enews">
+                        <li class="parsley-required">This value is required.</li>
+                    </ul>
+                    <li class="even valTRAVEL">
+                        <input type="checkbox" value="TRAVEL" name="Enews[TRAVEL]" class="checkbox" id="Form_TestForm_Enews_TRAVEL" data-parsley-required="true" data-parsley-multiple="Enews">
+                        <label for="Form_TestForm_Enews_TRAVEL">Travel</label>
+                    </li>
+                    <li class="odd valM4M">
+                        <input type="checkbox" value="M4M" name="Enews[M4M]" class="checkbox" id="Form_TestForm_Enews_M4M" data-parsley-required="true" data-parsley-multiple="Enews">
+                        <label for="Form_TestForm_Enews_M4M">More for Members</label>
+                    </li>
+                    <li class="even valSAMOTOR">
+                        <input type="checkbox" value="SAMOTOR" name="Enews[SAMOTOR]" class="checkbox" id="Form_TestForm_Enews_SAMOTOR" data-parsley-required="true" data-parsley-multiple="Enews">
+                        <label for="Form_TestForm_Enews_SAMOTOR">SAmotor</label>
+                    </li>
+                    <li class="odd valSHOP">
+                        <input type="checkbox" value="SHOP" name="Enews[SHOP]" class="checkbox" id="Form_TestForm_Enews_SHOP" data-parsley-required="true" data-parsley-multiple="Enews">
+                        <label for="Form_TestForm_Enews_SHOP">Shop</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="field dropdown" id="DDP">
+            <label for="Form_TestForm_DDP" class="left">Choose an item</label>
+            <div class="middleColumn">
+                <select id="Form_TestForm_DDP" class="dropdown" name="DDP">
+                    <option selected="selected" value="">(Select one)</option>
+                    <option value="ITEM1">Item 1</option>
+                    <option value="ITEM2">Item 2</option>
+                    <option value="ITEM3">Item 3</option>
+                    <option value="ITEM4">Item 4</option>
+                    <option value="ITEM5">Item 5</option>
+                </select>
+                <ul class="parsley-errors-list" id="parsley-id-6828"></ul>
+            </div>
+        </div>
+        <div class="field groupeddropdown dropdown" id="DDP2">
+            <label for="Form_TestForm_DDP2" class="left">Choose an item</label>
+            <div class="middleColumn">
+                <select id="Form_TestForm_DDP2" class="groupeddropdown dropdown" name="DDP2">
+                    <option value="" selected="selected">(Select one)</option>
+                    <optgroup label="Group1">
+                        <option value="ITEM1">Item 1</option>
+                        <option value="ITEM2">Item 2</option>
+                        <option value="ITEM3">Item 3</option>
+                        <option value="ITEM4">Item 4</option>
+                        <option value="ITEM5">Item 5</option>
+                    </optgroup>
+                    <optgroup label="Group2">
+                        <option value="ITEM6">Item 6</option>
+                        <option value="ITEM7">Item 7</option>
+                        <option value="ITEM8">Item 8</option>
+                        <option value="ITEM9">Item 9</option>
+                        <option value="ITEM0">Item 0</option>
+                    </optgroup>
+                </select>
+                <ul class="parsley-errors-list" id="parsley-id-8388"></ul>
+            </div>
+        </div>
+        <div class="field listbox" id="Multi1">
+            <label for="Form_TestForm_Multi1" class="left">Choose items</label>
+            <div class="middleColumn">
+                <select id="Form_TestForm_Multi1" class="listbox" name="Multi1">
+                    <option value="ITEM1">Item 1</option>
+                    <option value="ITEM2">Item 2</option>
+                    <option selected="selected" value="ITEM3">Item 3</option>
+                    <option value="ITEM4">Item 4</option>
+                    <option value="ITEM5">Item 5</option>
+                </select>
+                <ul class="parsley-errors-list" id="parsley-id-2743"></ul>
+            </div>
+        </div>
+        <div class="field lookup readonly" id="lf1">
+            <label for="Form_TestForm_lf1" class="left">Look up field</label>
+            <div class="middleColumn">
+                <span id="Form_TestForm_lf1" class="readonly">Item 3</span>
+                <input type="hidden" value="ITEM3" name="lf1">
+            </div>
+        </div>
+        <div class="field nullable" id="Field1">
+            <label for="Form_TestForm_Field1" class="left">Field 1</label>
+            <div class="middleColumn">
+                <input type="text" id="Field1" class="text" value="abc" name="Field1">
+                <ul class="parsley-errors-list" id="parsley-id-2624"></ul>
+                <input type="checkbox" id="Field1_IsNull" class="checkbox" value="1" name="Field1_IsNull" data-parsley-multiple="Field1_IsNull">&nbsp;<span>Is Null</span>
+            </div>
+            <ul class="parsley-errors-list" id="parsley-id-multiple-Field1_IsNull"></ul>
+        </div>
+        <div class="field numeric text" id="nf">
+            <label for="Form_TestForm_nf" class="left">NumericField</label>
+            <div class="middleColumn">
+                <input type="text" id="Form_TestForm_nf" class="numeric text" value="5" name="nf">
+                <ul class="parsley-errors-list" id="parsley-id-8993"></ul>
+            </div>
+        </div>
+        <div class="field readonly" id="NFR1">
+            <label for="Form_TestForm_NFR1" class="left">NumericField_Readonly</label>
+            <div class="middleColumn">
+                <span class="readonly" id="Form_TestForm_NFR1">0</span>
+            </div>
+        </div>
+        <div name="OP1" class="field optionset" id="OP1">
+            <label class="left">OptionsetField</label>
+            <div class="middleColumn">
+                <ul class="optionset" id="Form_TestForm_OP1">
+                    <li class="odd val1">
+                        <input type="radio" value="1" name="OP1" class="radio" id="Form_TestForm_OP1_1" data-parsley-multiple="OP1">
+                        <label for="Form_TestForm_OP1_1">Option 1</label>
+                    </li>
+                    <ul class="parsley-errors-list" id="parsley-id-multiple-OP1"></ul>
+                    <li class="even val2">
+                        <input type="radio" value="2" name="OP1" class="radio" id="Form_TestForm_OP1_2" data-parsley-multiple="OP1">
+                        <label for="Form_TestForm_OP1_2">Option 2</label>
+                    </li>
+                    <li class="odd val3">
+                        <input type="radio" checked="" value="3" name="OP1" class="radio" id="Form_TestForm_OP1_3" data-parsley-multiple="OP1">
+                        <label for="Form_TestForm_OP1_3">Option 3</label>
+                    </li>
+                    <li class="even val4">
+                        <input type="radio" value="4" name="OP1" class="radio" id="Form_TestForm_OP1_4" data-parsley-multiple="OP1">
+                        <label for="Form_TestForm_OP1_4">Option 4</label>
+                    </li>
+                    <li class="odd val5">
+                        <input type="radio" value="5" name="OP1" class="radio" id="Form_TestForm_OP1_5" data-parsley-multiple="OP1">
+                        <label for="Form_TestForm_OP1_5">Option 5</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="field readonly" id="rf1">
+            <label for="Form_TestForm_rf1" class="left">read only field</label>
+            <div class="middleColumn">
+                <span class="readonly" id="Form_TestForm_rf1">value</span>
+            </div>
+        </div>
+        <div class="field textarea" id="description">
+            <label for="Form_TestForm_description" class="left">Description</label>
+            <div class="middleColumn">
+                <textarea cols="20" rows="5" id="Form_TestForm_description" class="textarea" name="description">This is the default description</textarea>
+                <ul class="parsley-errors-list" id="parsley-id-3696"></ul>
+            </div>
+        </div>
+        <div class="field date text" id="datefield">
+            <label for="Form_TestForm_datefield" class="left">Date Field</label>
+            <div class="middleColumn">
+                <input type="text" data-jquerydateformat="M d, yy" id="Form_TestForm_datefield" class="date text" name="datefield">
+                <ul class="parsley-errors-list"></ul>
+            </div>
+        </div>
+        <div class="field time text" id="timeField">
+            <label for="Form_TestForm_timeField" class="left">Time Field</label>
+            <div class="middleColumn">
+                <input type="text" id="Form_TestForm_timeField" class="time text {&quot;timeformat&quot;:&quot;h:mm:ss a&quot;}" value="12:00:00 AM" name="timeField">
+                <ul class="parsley-errors-list"></ul>
+            </div>
+        </div>
+        <div class="clear">
+            <!-- -->
+        </div>
+    </fieldset>
+</div>

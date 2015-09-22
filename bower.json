@@ -1,0 +1,26 @@
+{
+  "name": "jsRuleEvaluator",
+  "version": "0.1.0",
+  "authors": [
+    "Ariex <ariexcorn@gmail.com>"
+  ],
+  "description": "a simple rule engine for js",
+  "main": "dist/RuleEvaluator.js",
+  "keywords": [
+    "javascript",
+    "rule",
+    "engine"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "unittest"
+  ],
+  "dependencies": {
+    "babel-polyfill": "~0.0.1"
+  }
+}

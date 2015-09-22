@@ -1,0 +1,19 @@
+{
+  "name": "js-rule-evaluator",
+  "version": "1.0.0",
+  "description": "a simple rule evaluator",
+  "main": "RuleEvaluator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ariex",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "merge-stream": "^1.0.0"
+  }
+}
