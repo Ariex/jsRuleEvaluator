@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 
 gulp.task("default", function(){
 	console.log("Please use 'npm install' to install necessary packages.");
-	console.log("Please use 'bower install' to install babel-polyfill. Reason of this dependency is on bower instead of npm is because this project is made for web but not nodejs.");
+	console.log("Please use 'bower install' to install babel-polyfill.");
 	console.log("Please use 'gulp rebuild' to re-compile, publish, update unit test files.");
 	console.log("Please use 'gulp publish' to re-compile and publish to 'dist' folder.");
 	console.log("Compilation result will be available at 'dist' folder, this project utilized some method from babel-polyfill, which is also included in this folder.");
